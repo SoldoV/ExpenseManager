@@ -83,7 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Chart(_recentTranasctions),
-            TransactionList(_userTransactions, _deleteTransaction),
+            Container(
+                child: TransactionList(_userTransactions, _deleteTransaction),
+                margin: EdgeInsets.only(bottom: 100)),
           ],
         ),
       ),

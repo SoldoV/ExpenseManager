@@ -12,7 +12,7 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height - 240,
+      height: MediaQuery.of(context).size.height - 245,
       child: userTransactions.isEmpty
           ? Container(
               child: Text('No transactions',
@@ -20,6 +20,8 @@ class TransactionList extends StatelessWidget {
               alignment: Alignment.center,
             )
           : ListView.builder(
+              padding: const EdgeInsets.only(
+                  bottom: kFloatingActionButtonMargin + 65),
               itemBuilder: (ctx, i) {
                 return Card(
                     child: Container(
